@@ -18,5 +18,4 @@
                )
   :components ((:file "package")
                (:file "beeceej")
-               (:file "api")
-               (:file "blog")))
+               (:file "api")))

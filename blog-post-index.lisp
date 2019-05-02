@@ -1,5 +1,5 @@
 
-(in-package #:blog.beeceej.com)
+(in-package #beeceej)
 
 (defclass blog-post-index ()
   ((posts :initarg :posts :accessor posts)))
@@ -19,4 +19,4 @@
 ;;     (loop for post in all-posts do (process-post post))))
 
 
-(loop for post in all-posts do (process-post post))
+;; (loop for post in all-posts do (process-post post))

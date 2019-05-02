@@ -1,4 +1,4 @@
-(in-package #:blog.beeceej.com)
+;; (in-package #:blog.beeceej.com)
 
-(defclass home-page ()
-  )
+;; (defclass home-page ()
+;;   )

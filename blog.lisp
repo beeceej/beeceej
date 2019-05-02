@@ -1,4 +1,4 @@
-(in-package #:blog.beeceej.com)
+(in-package #:beeceej)
 
 (defclass blog-post ()
   ((title :initarg :title :accessor title)
@@ -42,16 +42,3 @@
               (posted-at obj)
               (updated-at obj)
               (visible obj)))))
-
-
-(defclass nav ()
-  ((items :initarg :items :accessor items)
-   (icons :initarg :icons :accessor icons)
-   ))
-
-(defmethod print-object ((obj nav) out)
-  (let ((fmt-string ":items ~a :icons ~a"))
-  (print-unreadable-object (obj out :type t)
-    (format out fmt-string 
-            (items obj)
-            (icons obj)))))

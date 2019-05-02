@@ -1,7 +1,7 @@
 ;;;; blog.beeceej.com.asd
 
 (asdf:defsystem #:beeceej
-  :description "package BEECEEJ is everythign to do with beeceej.com"
+  :description "package BEECEEJ is everything to do with beeceej.com"
   :author "Brian Jones <beeceej.code@gmail.com>"
   :license  "MIT"
   :version "0.0.1"

@@ -14,7 +14,6 @@
 (defun get-all-posts ()
   (let ((stream (drakma:http-request *all-posts-url* :want-stream t)))
     (utf-8-stream stream)
-    (setf (flexi-streams:flexi-stream-external-format stream) :utf-8)
     (yason:parse stream :object-as :alist)))
 
 (defun get-post (name)
@@ -22,7 +21,6 @@
                  (format nil "https://static.beeceej.com/posts/~a.json" name)
                  :want-stream t)))
     (utf-8-stream stream)
-    (setf (flexi-streams:flexi-stream-external-format stream) :utf-8)
     (yason:parse stream :object-as :alist)))
 
 

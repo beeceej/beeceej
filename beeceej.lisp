@@ -179,7 +179,7 @@ we do this to ensure each component is rendered correctly"
            ))
          (xhtmlambda:body
           ()
-          (get-body obj)
+          (render-components obj)
           )
          ;; Some Javascript goes down here
          (xhtmlambda:script "")))))

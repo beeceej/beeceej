@@ -1,4 +1,4 @@
-(in-package #'beeceej)
+(in-package #:beeceej)
 
 (defclass javascript ()
   ((raw :initarg :raw :accessor raw)))
@@ -9,7 +9,7 @@
         (out-string)
         (cl-who:htm (:script (cl-who:str (raw obj)))))))
 
-(defmethod print-object ((obj blog-post) out)
+(defmethod print-object ((obj javascript) out)
   (print-unreadable-object (obj out :type t)
     (format out "~a" (raw obj))))
 

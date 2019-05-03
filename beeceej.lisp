@@ -12,7 +12,6 @@
              (let ((contents (make-string (file-length stream))))
                (read-sequence contents stream)
                contents))))
-    (print (type-of (read-file "./static/index.js")))
     (setf *index-javascript* (read-file "./static/index.js"))
     (setf *index-css* (read-file "./static/index.css"))))
 
@@ -24,8 +23,7 @@
   ;; grabs the data.
   ;; turns the dat into an a list
   ;; calls render on app
-  (unless *all-posts* (rest (assoc "posts" (get-all-posts) :test #'string=)))
-  (let* ((all-posts *all-posts*)
+  (let* ((all-posts (rest (assoc "posts" (get-all-posts) :test #'string=)))
          (nav (make-instance 'nav))
          (posts
            (loop :for post in all-posts

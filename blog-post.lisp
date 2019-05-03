@@ -16,14 +16,9 @@
 (defmethod render ((obj blog-post))
   "render writes the html to the out-stream passed in"
   (with-output-to-string (out-string)
-    (xhtmlambda:with-html-syntax-output
+    (cl-who:with-html-output
         (out-string)
-        (xhtmlambda:div
-         ()
-         (xhtmlambda:div
-          ()
-          ;; Render The Markdown
-          (markdown-to-html-string (body obj)))))))
+      (cl-who:htm (:div (cl-who:str (markdown-to-html-string (body obj))))))))
 
 (defmethod print-object ((obj blog-post) out)
   (print-unreadable-object (obj out :type t)

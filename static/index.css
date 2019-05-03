@@ -1,0 +1,26 @@
+.flexContainer {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation {
+    font-family: monospace;
+    font-size: 3em;
+    color: #357cb2;
+}
+
+.clickable {
+    cursor: pointer;
+    color: #357cb2;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.clickable:hover {
+    color: #185180;
+    font-weight: bold;
+}

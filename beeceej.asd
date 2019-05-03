@@ -14,8 +14,12 @@
                #:3bmd-ext-tables
                #:3bmd-ext-code-blocks
                #:xhtmlambda
-               #:colorize
-               )
+               #:cl-who
+               #:colorize)
   :components ((:file "package")
                (:file "beeceej")
+               (:file "blog-post")
+               (:file "app")
+               (:file "nav")
+               (:file "javascript")
                (:file "api")))
